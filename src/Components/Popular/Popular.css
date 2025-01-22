@@ -1,0 +1,44 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 2vh, 15px);
+  height: clamp(60vh, 90vh, 100vh);
+  background: linear-gradient(180deg, #f7fafc, #e2e8f0);
+  padding: clamp(20px, 5vh, 40px);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.popular h1 {
+  color: #333;
+  font-size: clamp(24px, 5vw, 50px);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.popular hr {
+  width: clamp(120px, 15vw, 200px);
+  height: clamp(3px, 0.5vw, 6px);
+  border-radius: 10px;
+  background: #5a67d8;
+  transition: all 0.3s ease;
+}
+
+.popular-item {
+  margin-top: clamp(20px, 5vh, 50px);
+  display: flex;
+  gap: clamp(5px, 2vw, 30px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  .popular-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
